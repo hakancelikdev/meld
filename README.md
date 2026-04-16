@@ -3,6 +3,7 @@
 Marketing site for **Meld** — a minimalist tile-merge puzzle for iOS.
 
 Static site served via GitHub Pages at <https://meld.hakancelik.dev>.
+Deploys automatically on every push to `main` through the `Deploy to GitHub Pages` workflow.
 
 ## Pages
 
@@ -24,10 +25,23 @@ python3 -m http.server 4321
 
 ## Deploying
 
-1. Push this directory to the repository's `main` branch.
-2. In GitHub repo settings → Pages, set source to `main` / root.
-3. The `CNAME` file points GitHub Pages at `meld.hakancelik.dev`.
-   DNS: a `CNAME` record from `meld` → `<user>.github.io`.
+The site is deployed by the workflow at `.github/workflows/deploy.yml`:
+
+- Triggered by every push to `main` (and manually via `workflow_dispatch`).
+- Uploads the repo root as a Pages artifact.
+- Deploys via `actions/deploy-pages@v4`.
+
+### One-time GitHub setup
+
+1. Repo **Settings → Pages → Build and deployment → Source**: **GitHub Actions**.
+2. **Settings → Pages → Custom domain**: `meld.hakancelik.dev` (picked up from `CNAME`).
+3. DNS (Cloudflare → `hakancelik.dev` → DNS):
+
+   | Type  | Name | Content                   | Proxy     |
+   | ----- | ---- | ------------------------- | --------- |
+   | CNAME | meld | `hakancelikdev.github.io` | DNS only  |
+
+4. Once the Pages cert is provisioned, enable **Enforce HTTPS**.
 
 ## Assets
 
