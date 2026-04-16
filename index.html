@@ -1,0 +1,456 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Meld — A minimalist tile puzzle. Slide. Merge. Dissolve.</title>
+  <meta name="description" content="Meld is a minimalist tile-merge puzzle for iOS. 900 hand-crafted and procedural levels across 12 chapters, plus daily, weekly, speedrun and endless modes. Think. Merge. Meld." />
+  <meta name="author" content="Hakan Celik" />
+  <meta name="theme-color" content="#f5ede0" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Meld — Slide. Merge. Dissolve." />
+  <meta property="og:description" content="A minimalist tile-merge puzzle for iOS. 900 levels across 12 chapters. Daily, weekly, speedrun & endless modes." />
+  <meta property="og:image" content="https://meld.hakancelik.dev/assets/app-icon.png" />
+  <meta property="og:url" content="https://meld.hakancelik.dev" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Meld — Slide. Merge. Dissolve." />
+  <meta name="twitter:description" content="A minimalist tile-merge puzzle for iOS. 900 levels, daily challenges, speedrun & endless modes." />
+  <meta name="twitter:image" content="https://meld.hakancelik.dev/assets/app-icon.png" />
+
+  <link rel="icon" type="image/png" href="assets/app-icon.png" />
+  <link rel="apple-touch-icon" href="assets/app-icon.png" />
+  <link rel="canonical" href="https://meld.hakancelik.dev/" />
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MobileApplication",
+    "name": "Meld",
+    "operatingSystem": "iOS 18.0+",
+    "applicationCategory": "GameApplication",
+    "applicationSubCategory": "Puzzle",
+    "description": "A minimalist tile-merge puzzle for iOS. 900 levels across 12 chapters, plus daily, weekly, speedrun and endless modes.",
+    "author": { "@type": "Person", "name": "Hakan Celik", "url": "https://hakancelik.dev" },
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "image": "https://meld.hakancelik.dev/assets/app-icon.png",
+    "url": "https://meld.hakancelik.dev",
+    "installUrl": "https://apps.apple.com/app/id6762136232"
+  }
+  </script>
+</head>
+<body>
+
+<!-- Navigation -->
+<header class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="/" aria-label="Meld — home">
+      <span class="brand-mark"><img src="assets/app-icon.png" alt="" /></span>
+      <span>Meld</span>
+    </a>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#how">How it plays</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#modes">Modes</a></li>
+        <li><a href="#themes">Themes</a></li>
+        <li><a href="support.html">Support</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn-primary nav-cta" href="https://apps.apple.com/app/id6762136232" target="_blank" rel="noopener"><span class="full">Get on App Store</span><span class="short">App Store</span></a>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="container hero-inner">
+    <div class="hero-copy">
+      <p class="eyebrow reveal">A minimalist tile puzzle · iOS 18+</p>
+      <h1 class="hero-title reveal">
+        <span class="line">Slide. Merge.</span>
+        <span class="line"><em>Dissolve.</em></span>
+      </h1>
+      <p class="hero-sub reveal">
+        Meld is a quiet little puzzle. Swipe to slide every tile, merge identical values, and watch them dissolve from the board. Simple to learn. Endlessly satisfying.
+      </p>
+      <div class="hero-ctas reveal">
+        <a class="app-store-btn" href="https://apps.apple.com/app/id6762136232" target="_blank" rel="noopener">
+          <svg viewBox="0 0 384 512" fill="currentColor" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zM260.9 82.4c18.9-18.5 28.8-42.3 28.3-67.4 0-2.4-.2-4.8-.5-7-23.1 1.1-44.3 13.5-61.1 30.8-16.9 16.9-27.7 40.2-27.7 64.8 0 2.3.2 4.6.5 6.9 23.1 1.1 44.3-11.3 60.5-28.1z"/></svg>
+          <span class="asb-label">
+            <small>Download on the</small>
+            <strong>App Store</strong>
+          </span>
+        </a>
+        <a class="btn btn-ghost" href="#how">See how it plays</a>
+      </div>
+      <div class="hero-meta reveal">
+        <span>900 levels</span>
+        <span class="dot"></span>
+        <span>Free to play</span>
+        <span class="dot"></span>
+        <span>No account required</span>
+        <span class="dot"></span>
+        <span>8 languages</span>
+      </div>
+    </div>
+
+    <div class="hero-visual reveal">
+      <div class="hero-tiles" aria-hidden="true">
+        <div class="float-tile t1"><em>1</em></div>
+        <div class="float-tile t2"><em>2</em></div>
+        <div class="float-tile t3"><em>3</em></div>
+        <div class="float-tile t4"><em>4</em></div>
+      </div>
+      <div class="phone" aria-hidden="true">
+        <div class="phone-screen" data-hero-screen>
+          <img src="assets/screenshots/en/01-hero.png" alt="" />
+          <img src="assets/screenshots/en/04-gameplay.png" alt="" />
+          <img src="assets/screenshots/en/02-chapters.png" alt="" />
+          <img src="assets/screenshots/en/03-modes.png" alt="" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- How it plays -->
+<section class="rules" id="how">
+  <div class="container">
+    <div class="rules-head">
+      <p class="eyebrow reveal">The rules</p>
+      <h2 class="reveal"><em class="italic">Four</em> tiny rules.<br />A world of decisions.</h2>
+      <p class="lead reveal">Every Meld puzzle is a handful of tiles, a move budget, and one quiet goal — empty the board.</p>
+    </div>
+
+    <div class="rule-grid">
+      <div class="rule-card reveal">
+        <div class="mini-tiles">
+          <span class="mt v1"><em>1</em></span>
+          <span class="mt arrow">→</span>
+          <span class="mt v1"><em>1</em></span>
+        </div>
+        <span class="rule-num">01</span>
+        <h3>Slide</h3>
+        <p>Swipe up, down, left or right. Every tile on the board moves in that direction until it hits something.</p>
+      </div>
+
+      <div class="rule-card reveal">
+        <div class="mini-tiles">
+          <span class="mt v1"><em>1</em></span>
+          <span class="mt v1"><em>1</em></span>
+          <span class="mt arrow">→</span>
+          <span class="mt v2"><em>2</em></span>
+        </div>
+        <span class="rule-num">02</span>
+        <h3>Merge</h3>
+        <p>Two identical tiles that collide become one — with the next value. 1 + 1 = 2. 2 + 2 = 3. It keeps climbing.</p>
+      </div>
+
+      <div class="rule-card reveal">
+        <div class="mini-tiles">
+          <span class="mt v4"><em>4</em></span>
+          <span class="mt arrow">→</span>
+          <span class="mt vanish">·</span>
+        </div>
+        <span class="rule-num">03</span>
+        <h3>Dissolve</h3>
+        <p>A tile that reaches the dissolve value — 4 in most chapters — quietly vanishes from the board.</p>
+      </div>
+
+      <div class="rule-card reveal">
+        <div class="mini-tiles">
+          <span class="mt vanish">·</span>
+          <span class="mt vanish">·</span>
+          <span class="mt vanish">·</span>
+        </div>
+        <span class="rule-num">04</span>
+        <h3>Clear</h3>
+        <p>Remove every tile before the move budget runs out. Finish at par for three stars. Every move counts.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Stats -->
+<section class="stats-wrap">
+  <div class="container">
+    <div class="stats reveal">
+      <div class="stat"><span class="n">900</span><span class="l">Levels</span></div>
+      <div class="stat"><span class="n">12</span><span class="l">Chapters</span></div>
+      <div class="stat"><span class="n">10</span><span class="l">Themes</span></div>
+      <div class="stat"><span class="n">8</span><span class="l">Languages</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- Features -->
+<section id="features">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow reveal">Under the hood</p>
+      <h2 class="reveal">Built for the way you actually play.</h2>
+      <p class="lead reveal">Play offline on the train. Pick up on another device. No logins, no friction, no nonsense.</p>
+    </div>
+
+    <div class="features-grid">
+      <div class="feature reveal">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4zM14 14h6v6h-6z"/></svg></div>
+        <h3>900 levels, zero filler</h3>
+        <p>150 hand-designed puzzles introduce every mechanic. 750 procedural levels — all verified solvable — push the rest.</p>
+      </div>
+
+      <div class="feature reveal highlight">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 11h18"/></svg></div>
+        <h3>A new puzzle every day</h3>
+        <p>Same daily challenge worldwide, same weekly challenge everyone. Build streaks, earn rewards, compete globally.</p>
+      </div>
+
+      <div class="feature reveal">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div>
+        <h3>Speedrun mode</h3>
+        <p>Ten fresh levels. One race against the clock. Fastest run on the Game Center leaderboard takes the day.</p>
+      </div>
+
+      <div class="feature reveal">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg></div>
+        <h3>Endless mode</h3>
+        <p>Infinite procedural puzzles with rising difficulty. The run ends when you run out of moves — not before.</p>
+      </div>
+
+      <div class="feature reveal">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17.8 5.3A9 9 0 1 0 22 12"/><polyline points="22 4 22 12 14 12"/></svg></div>
+        <h3>iCloud sync</h3>
+        <p>Your progress, stars and purchases follow you across every device on your Apple ID. No account. No logins.</p>
+      </div>
+
+      <div class="feature reveal">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M2.05 12h19.9M12 2.05c2.5 3 3.9 6.4 3.9 9.95S14.5 18.95 12 21.95M12 2.05C9.5 5.05 8.1 8.45 8.1 12S9.5 18.95 12 21.95"/></svg></div>
+        <h3>Plays anywhere</h3>
+        <p>Fully offline. No internet required. Supports English, Turkish, German, Japanese, Spanish, Korean, Portuguese and French.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Modes -->
+<section class="modes" id="modes">
+  <div class="container modes-grid">
+    <div class="modes-copy reveal">
+      <p class="eyebrow">Five ways to play</p>
+      <h2>One game.<br /><em class="italic">Many rhythms.</em></h2>
+      <p class="lead">Play a quick daily. Race a speedrun on your break. Sink an evening into the campaign. They all live in the same minimalist space.</p>
+
+      <ul class="modes-list">
+        <li>
+          <div class="mi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4zM14 14h6v6h-6z"/></svg></div>
+          <div>
+            <h4>Campaign — 900 levels</h4>
+            <p>12 chapters. 3×3 intros to 5×5 mastery. Frozen tiles, blockers, extended dissolves.</p>
+          </div>
+        </li>
+        <li>
+          <div class="mi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 11h18M16 3v4M8 3v4"/></svg></div>
+          <div>
+            <h4>Daily Challenge</h4>
+            <p>A single shared puzzle each day. Keep your streak alive — use a freeze if you miss one.</p>
+          </div>
+        </li>
+        <li>
+          <div class="mi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l2.4 7.2H22l-6.2 4.5L18.2 21 12 16.5 5.8 21l2.4-7.3L2 9.2h7.6L12 2z"/></svg></div>
+          <div>
+            <h4>Weekly Challenge</h4>
+            <p>Seven curated puzzles, one per day, with reward tiers for partial and perfect weeks.</p>
+          </div>
+        </li>
+        <li>
+          <div class="mi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div>
+          <div>
+            <h4>Speedrun</h4>
+            <p>Ten levels, one timer. Post the fastest run on the global leaderboard.</p>
+          </div>
+        </li>
+        <li>
+          <div class="mi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 12a6 6 0 1 1-12 0 6 6 0 0 1 12 0zM12 3v3M12 18v3M3 12h3M18 12h3"/></svg></div>
+          <div>
+            <h4>Endless</h4>
+            <p>Procedural puzzles that ramp up forever. See how far you can push the streak.</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="modes-phone reveal">
+      <div class="phone">
+        <div class="phone-screen">
+          <img src="assets/screenshots/en/03-modes.png" alt="Meld modes screen" class="active" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Screenshots -->
+<section class="showcase">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow reveal">A quick look</p>
+      <h2 class="reveal">Every screen, earned.</h2>
+      <p class="lead reveal">A calm interface that stays out of the way. Drag to browse →</p>
+    </div>
+  </div>
+
+  <div class="shots" aria-label="App screenshots">
+    <figure class="shot reveal"><img src="assets/screenshots/en/01-hero.png" alt="Meld title screen" /><figcaption class="shot-caption">Title</figcaption></figure>
+    <figure class="shot reveal"><img src="assets/screenshots/en/02-chapters.png" alt="Chapter select" /><figcaption class="shot-caption">12 chapters</figcaption></figure>
+    <figure class="shot reveal"><img src="assets/screenshots/en/03-modes.png" alt="Daily and weekly modes" /><figcaption class="shot-caption">Daily · Weekly · Speedrun · Endless</figcaption></figure>
+    <figure class="shot reveal"><img src="assets/screenshots/en/04-gameplay.png" alt="Gameplay — 5x5 grid" /><figcaption class="shot-caption">Gameplay</figcaption></figure>
+    <figure class="shot reveal"><img src="assets/screenshots/en/05-frozen.png" alt="Frozen tiles" /><figcaption class="shot-caption">Frozen tiles</figcaption></figure>
+    <figure class="shot reveal"><img src="assets/screenshots/en/06-difficulty.png" alt="Difficulty progression" /><figcaption class="shot-caption">Rising difficulty</figcaption></figure>
+    <figure class="shot reveal"><img src="assets/screenshots/en/07-profile.png" alt="Player profile" /><figcaption class="shot-caption">Achievements &amp; stats</figcaption></figure>
+  </div>
+</section>
+
+<!-- Themes -->
+<section class="themes" id="themes">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow reveal">Ten palettes</p>
+      <h2 class="reveal">Pick a mood.<br /><em class="italic">The whole board</em> changes.</h2>
+      <p class="lead reveal">Five free palettes to get started. Five premium ones for a complete aesthetic shift — from warm sand to cyberpunk neon.</p>
+    </div>
+
+    <div class="theme-row">
+      <div class="theme-tile sand reveal">
+        <div class="t-swatches">
+          <span class="sw" style="background:#f5ede0"></span>
+          <span class="sw" style="background:#d7bd8a"></span>
+          <span class="sw" style="background:#8b6f3d"></span>
+          <span class="sw" style="background:#3a2e1c"></span>
+        </div>
+        <div>
+          <h4>Sand</h4>
+          <p>Default</p>
+        </div>
+      </div>
+      <div class="theme-tile noir reveal">
+        <div class="t-swatches">
+          <span class="sw" style="background:#17120c"></span>
+          <span class="sw" style="background:#3b2e1d"></span>
+          <span class="sw" style="background:#d4b469"></span>
+          <span class="sw" style="background:#f1d99a"></span>
+        </div>
+        <div>
+          <h4>Noir</h4>
+          <p>Premium</p>
+        </div>
+      </div>
+      <div class="theme-tile neon reveal">
+        <div class="t-swatches">
+          <span class="sw" style="background:#11131c"></span>
+          <span class="sw" style="background:#3e2a72"></span>
+          <span class="sw" style="background:#ff4fc0"></span>
+          <span class="sw" style="background:#41e9ff"></span>
+        </div>
+        <div>
+          <h4>Neon</h4>
+          <p>Premium</p>
+        </div>
+      </div>
+      <div class="theme-tile candy reveal">
+        <div class="t-swatches">
+          <span class="sw" style="background:#fce6ea"></span>
+          <span class="sw" style="background:#f4a9b8"></span>
+          <span class="sw" style="background:#8f4b5a"></span>
+          <span class="sw" style="background:#5a3843"></span>
+        </div>
+        <div>
+          <h4>Candy</h4>
+          <p>Premium</p>
+        </div>
+      </div>
+      <div class="theme-tile aurora reveal">
+        <div class="t-swatches">
+          <span class="sw" style="background:#1a4450"></span>
+          <span class="sw" style="background:#2d6974"></span>
+          <span class="sw" style="background:#6d4a8f"></span>
+          <span class="sw" style="background:#d8f1e9"></span>
+        </div>
+        <div>
+          <h4>Aurora</h4>
+          <p>Premium</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <div class="container">
+    <p class="eyebrow reveal">Free to play</p>
+    <h2 class="reveal"><em class="italic">Think.</em> Merge. Meld.</h2>
+    <p class="lead reveal">A little puzzle to keep your mind company. Works offline, syncs over iCloud, and costs nothing to start.</p>
+    <div class="cta-ctas reveal">
+      <a class="app-store-btn" href="https://apps.apple.com/app/id6762136232" target="_blank" rel="noopener">
+        <svg viewBox="0 0 384 512" fill="currentColor" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zM260.9 82.4c18.9-18.5 28.8-42.3 28.3-67.4 0-2.4-.2-4.8-.5-7-23.1 1.1-44.3 13.5-61.1 30.8-16.9 16.9-27.7 40.2-27.7 64.8 0 2.3.2 4.6.5 6.9 23.1 1.1 44.3-11.3 60.5-28.1z"/></svg>
+        <span class="asb-label"><small>Download on the</small><strong>App Store</strong></span>
+      </a>
+      <a class="btn btn-ghost" href="support.html">Read the FAQ</a>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a class="brand" href="/">
+          <span class="brand-mark"><img src="assets/app-icon.png" alt="" /></span>
+          <span>Meld</span>
+        </a>
+        <p>A minimalist tile puzzle for iOS. Built in Swift by one developer who cares about the small stuff.</p>
+      </div>
+
+      <div>
+        <h5>App</h5>
+        <ul>
+          <li><a href="https://apps.apple.com/app/id6762136232" target="_blank" rel="noopener">App Store</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#modes">Modes</a></li>
+          <li><a href="#themes">Themes</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h5>Support</h5>
+        <ul>
+          <li><a href="support.html">FAQ</a></li>
+          <li><a href="mailto:hello@hakancelik.dev">Contact</a></li>
+          <li><a href="https://hakancelik.dev" target="_blank" rel="noopener">Developer</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h5>Legal</h5>
+        <ul>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Use</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© <span data-year>2026</span> Hakan Celik. All rights reserved.</span>
+      <span>Built in Swift &amp; SwiftUI · iOS 18+</span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js" defer></script>
+</body>
+</html>

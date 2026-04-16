@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Not found — Meld</title>
+  <meta name="theme-color" content="#f5ede0" />
+  <link rel="icon" type="image/png" href="/assets/app-icon.png" />
+  <link rel="stylesheet" href="/styles.css" />
+  <style>
+    .not-found {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 40px 24px;
+    }
+    .not-found .code {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: clamp(6rem, 18vw, 12rem);
+      line-height: 1;
+      color: var(--accent);
+      margin: 0 0 16px;
+    }
+    .not-found h1 {
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      margin: 0 0 16px;
+    }
+    .not-found p {
+      color: var(--ink-soft);
+      max-width: 520px;
+      margin: 0 0 32px;
+      line-height: 1.65;
+    }
+    .not-found .btns { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
+  </style>
+</head>
+<body>
+  <main class="not-found">
+    <p class="code">404</p>
+    <h1>This tile dissolved.</h1>
+    <p>The page you're looking for doesn't exist or has moved. Head back home — or grab the app.</p>
+    <div class="btns">
+      <a class="btn btn-primary" href="/">Back home</a>
+      <a class="btn btn-ghost" href="https://apps.apple.com/app/id6762136232" target="_blank" rel="noopener">App Store</a>
+    </div>
+  </main>
+</body>
+</html>
